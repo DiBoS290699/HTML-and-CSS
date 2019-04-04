@@ -1,24 +1,18 @@
-Basic CSS: Specify How Fonts Should Degrade
-There are several default fonts that are available in all browsers. These generic font families include monospace, serif and sans-serif
+Basic CSS: Size Your Images
+CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.
 
-When one font isn't available, you can tell the browser to "degrade" to another font.
+For example, if we wanted to create a CSS class called larger-image that gave HTML elements a width of 500 pixels, we'd use:
 
-For example, if you wanted an element to use the Helvetica font, but degrade to the sans-serif font when Helvetica wasn't available, you will specify it as follows:
+<style>
+  .larger-image {
+    width: 500px;
+  }
+</style>
 
-p {
-  font-family: Helvetica, sans-serif;
-}
-Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.
-
-
-To begin with, apply the monospace font to the h2 element, so that it now has two fonts - Lobster and monospace.
-
-In the last challenge, you imported the Lobster font using the link tag. Now comment out that import of the Lobster font(using the HTML comments you learned before) from Google Fonts so that it isn't available anymore. Notice how your h2 element degrades to the monospace font.
+Create a class called smaller-image and use it to resize the image so that it's only 100 pixels wide.
 
 Note
-If you have the Lobster font installed on your computer, you won't see the degradation because your browser is able to find the font.
+Due to browser implementation differences, you may need to be at 100% zoom to pass the tests on this challenge.
 
-Your h2 element should use the font Lobster.
-Your h2 element should degrade to the font monospace when Lobster is not available.
-Comment out your call to Google for the Lobster font by putting <!-- in front of it.
-Be sure to close your comment by adding -->.
+Your img element should have the class smaller-image.
+Your image should be 100 pixels wide. Browser zoom should be at 100%.
